@@ -1,20 +1,19 @@
 # nginx-docker-aws
-Summary:
+##**Summary:**
 
 Terraform was used to launch a cluster of EC2 instances. Each EC2 instance runs a nginx docker container in each availability zone. The load balancer and EC2 instances are launched in a custom VPC.
 
 Autoscaling is triggered by a policy that compares CPU utilization. If average CPU utilization is higher than 60% or lower than 50% for 2 consecutive periods then a new instance is created.
 
-Command Line:
+##**Command Line:**
 
-  -Setup:
-    terraform init
+terraform init
 
-  -Launch EC2 cluster:
-    terraform plan -out=aws.tfplan
-    terraform apply aws.tfplan
+terraform plan -out=aws.tfplan
 
-Notes:
+terraform apply aws.tfplan
+
+##**Notes:**
 
 AWS access credentials must be supplied to Terraform in "~/.aws/credentials" file. The scripts were tested with my AWS account with a user that has full admin policy.
 
