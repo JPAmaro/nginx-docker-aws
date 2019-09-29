@@ -8,13 +8,17 @@ Autoscaling is triggered by a policy that compares CPU utilization. If average C
 **Command Line:**
 
 Setup:
+
 $ terraform init
 
 Launch EC2 cluster:
+
 $ terraform plan -out=aws.tfplan
+
 $ terraform apply aws.tfplan
 
 Teardown EC2 cluster:
+
 $ terraform destroy
 
 **Notes:**
