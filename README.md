@@ -15,6 +15,11 @@ terraform apply aws.tfplan
 
 **Notes:**
 
-AWS access credentials must be supplied to Terraform in "~/.aws/credentials" file. The scripts were tested with my AWS account with a user that has full admin policy.
+AWS access credentials must be supplied at run time or, if created beforehand, Terraform can get the values from environment variables, that must be exported like this:
+export TF_VAR_aws_region=us-east-1
+export TF_VAR_aws_access_key=abc123
+export TF_VAR_aws_secret_key=def123
+
+The scripts were tested with my AWS account with a user that has full admin policy.
 
 After applying the Terraform configuration it returns the load balancer's public URL in the output to view the default nginx homepage.
