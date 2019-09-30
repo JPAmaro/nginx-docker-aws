@@ -11,7 +11,7 @@ Setup:\
 $ terraform init
 
 Launch EC2 cluster:\
-$ terraform plan -out=aws.tfplan
+$ terraform plan -out=aws.tfplan\
 $ terraform apply aws.tfplan
 
 Teardown EC2 cluster:\
@@ -22,7 +22,7 @@ $ terraform destroy
 AWS access credentials must be supplied at run time or, if created beforehand, Terraform can get the values from environment variables, that must be exported like this:\
 $ export TF_VAR_aws_region=us-east-1\
 $ export TF_VAR_aws_access_key=abc123\
-$ export TF_VAR_aws_secret_key=def123\
+$ export TF_VAR_aws_secret_key=def123
 
 The scripts were tested with my AWS account with a user that has full admin policy.
 
